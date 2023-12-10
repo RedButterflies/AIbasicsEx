@@ -236,7 +236,25 @@ def trenowanieC(n):
     print("Wynik mape dla ",n,'powtorzen, po zastapieniu outliers srednia: ', mapeA)
 
 
+
+
+
+
+def trenowanieD(n):
+    new_data = np.stack([x[:,3]*x[:,0],x[:,5]*x[:,6],x[:,1]*x[:,5],x[:,0]*x[:,3],x[3,5]*x[:,0]],axis = -1)
+    dodatkowy_x = np.concatenate([x,new_data],axis = -1)
+    for i in (0,n):
+        x_train,x_test,y_train,y_test = train_test_split(dodatkowy_x,y,test_size=0.4,shuffle=True)
+        linRegA = LinearRegression()
+        linRegA.fit(x_train,y_train)
+        y_pred=linRegA.predict(x_test)
+    
+    mapeA = mean_absolute_percentage_error(y_test, y_pred)
+    print("Wynik mape dla ",n,'powtorzen, po dodaniu dodatkowych danych: ', mapeA)
+
 trenowanieA(100)
 trenowanieB(100)
 trenowanieC(100)
+trenowanieD(100)
+
 
