@@ -19,3 +19,39 @@ Using the code presented in Listing 2.9, load the Diabetes dataset. Analyze it s
 Listing 2.9. Code to load the diabetes dataset:
 from sklearn.datasets import load_diabetes
 data = load_diabetes()
+
+
+
+
+Task 3.2. Transformation of Binary Qualitative Features
+
+Create a function based on the script that presents Listing 3.1 to a function with the following header:
+
+def qualitative_to_0_1(data, column, value_to_be_1):
+
+The function is intended to return the variable 'data' with the column named 'column' containing values of 0 or 1. Assign the value 1 to the values of the 'column' equal to 'value_to_be_1'. Use the created function to transform the rest of the binary qualitative features.
+
+Task 3.3. Calculation of Classification Metric Values
+
+For the data presented in Table 3.3 and Table 3.4, determine the values of all classification metrics.
+
+Task 3.4. Impact of Parameters on the Quality of Classification Models
+
+Test the kNN and SVM algorithms with different parameters:
+- kNN: number of neighbors (n_neighbors), method of determining weights ('uniform', 'distance'),
+- SVM: kernel.
+
+Task 3.5. Impact of Scaling Methods
+
+Examine the influence of different scaling methods on the classification quality using SVM and kNN methods. Test the classes StandardScaler, MinMaxScaler, RobustScaler.
+
+
+
+Task 3.6. Independent Classification
+
+Using the code presented in Listing 3.7, load data to train a model to distinguish between benign and malignant tumors. Conduct an analysis using the discussed classification methods. Build a decision tree with a height of 5, generate its illustration, and discuss which features influence the outcome.
+
+Listing 3.7. Script allowing loading of the BreastCancer dataset
+
+from sklearn.datasets import load_breast_cancer
+data = load_breast_cancer()
