@@ -55,3 +55,37 @@ Listing 3.7. Script allowing loading of the BreastCancer dataset
 
 from sklearn.datasets import load_breast_cancer
 data = load_breast_cancer()
+
+Task 4.1. Independent Application of PCA
+Download the dataset 'voice_extracted_features.csv' from the course website. Perform PCA analysis on it:
+1. Divide the dataset into subsets,
+2. Generate a scatter plot leaving 2 principal components, use class labels to mark the colors of points corresponding to individual observations,
+3. Build a plot of the explained variance percentage, select the optimal number of features for a 95% threshold,
+4. Conduct classification by creating your own Pipeline object.
+
+Task 4.2. Multiple Classification Experiments
+Conduct 30 cycles of training and testing for the loaded dataset. Test the kNN, SVM, and Decision Tree algorithms. For each testing cycle, generate a confusion matrix. Average the matrices, consider which gender the methods detect more easily. Justify your answer. Hint: try to find justification in the confusion matrix.
+
+Task 4.3. Definition of a Custom Class Determining the Optimal Number of Principal Components for PCA
+Write a class whose object can be attached to a Pipeline object. Let this class allow the selection of the number of features based on the percentage of explained variance. Hint: to attach the class object to a Pipeline, it must have methods such as 'fit(x)', 'transform(x)', 'fit_transform(x)'.
+
+Task 4.4. Definition of a Custom Class Responsible for Removing Outliers
+Write a class whose object can be attached to a Pipeline object. This class is intended to find outliers and eliminate them by replacing them with the mean.
+
+
+Task 5.2. Visualization of the Learning Process
+Implement the training process of a neural network independently. Generate plots for metrics and loss functions for both the training and testing sets. Use the MNIST dataset as input data, the loading of which is demonstrated in Listing 5.8.
+
+Listing 5.8. Loading the MNIST Dataset
+from sklearn.datasets import load_digits
+data = load_digits()
+X = data.data
+y = data.target
+
+
+Task 5.3. Cross-Validation
+Write a script that allows for grid search to find the most promising hyperparameter values. Test parameters such as the number of layers, the number of neurons in each layer, activation function, optimizer, and learning rate. Consider overfitting, meaning that the best result may not necessarily occur after the last epoch of network training.
+
+
+
+
