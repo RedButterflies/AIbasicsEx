@@ -4,6 +4,8 @@ Created on Mon Dec 11 22:23:27 2023
 
 @author: szyns
 """
+
+#3.6
 import pandas as pd
 import numpy as np
 
