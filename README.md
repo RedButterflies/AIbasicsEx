@@ -86,6 +86,13 @@ y = data.target
 Task 5.3. Cross-Validation
 Write a script that allows for grid search to find the most promising hyperparameter values. Test parameters such as the number of layers, the number of neurons in each layer, activation function, optimizer, and learning rate. Consider overfitting, meaning that the best result may not necessarily occur after the last epoch of network training.
 
+Task 6.1. Testing the Impact of L2 Regularization
+Create a network structure similar to the one shown in Listing 6.2. Keep only the Dense layer in the block. Conduct several experiments testing the model for various values of the L2 regularization parameter. Assume regularization coefficients `reg_rate = [0, 0.0001, 0.001, 0.01, 0.1]`. Generate scatter plots of the mean accuracy as a function of the regularization coefficient.
 
+Task 6.2. Testing the Impact of the Dropout Layer
+Create a network structure similar to the one shown in Listing 6.2. Keep only Dense and Dropout layers in the block. Conduct multiple experiments testing the model for different values of the `do_rate` parameter, assuming `do_rate = [0, 0.2, 0.3, 0.5]`. Generate scatter plots of the mean accuracy as a function of the `do_rate` parameter.
+
+Task 6.3. Testing the Impact of the GaussianNoise Layer
+Create a network structure similar to the one shown in Listing 6.2. Keep only Dense and GaussianNoise layers in the block. Conduct multiple experiments testing the model for different values of the `noise` parameter, assuming `noise = [0, 0.1, 0.2, 0.3]`. Generate scatter plots of the mean accuracy as a function of the `noise` parameter.
 
 
